@@ -9,6 +9,8 @@ const titles = [
   'Use effect basics',
   'Use effect replacing lifecycle methods',
   'Use reducer basics',
+  'Use memo basics',
+  'Use callback basics'
 ]
 
 function Home() {

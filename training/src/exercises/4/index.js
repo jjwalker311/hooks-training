@@ -3,6 +3,8 @@ import React from 'react'
 import { StopWatch, reducer } from './helpers'
 
 export default class Exercise4 extends React.Component {
+    // 🦁 https://reactjs.org/docs/hooks-reference.html#usereducer
+    // Use "useReducer" to initialise state and return what we need ({ lapse, running }, dispatch function)
     state = {
         lapse: 0,
         running: false,
@@ -11,10 +13,6 @@ export default class Exercise4 extends React.Component {
     // 🦁 https://reactjs.org/docs/hooks-reference.html#useref
     //  const timerRef = React.useRef(null)
     timerRef = React.createRef()
-
-
-    // 🦁 https://reactjs.org/docs/hooks-reference.html#usereducer
-    // Use "useReducer" to initialise state and return what we need (lapse, running, dispatch function)
 
     handleRunClick = () => {
         if (this.state.running) {
