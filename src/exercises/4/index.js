@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { StopWatch, reducer } from './helpers';
+import { StopWatch, reducer } from './helpers'
 
 export default class Exercise4 extends React.Component {
     // 🦁 https://reactjs.org/docs/hooks-reference.html#usereducer
@@ -16,24 +16,24 @@ export default class Exercise4 extends React.Component {
 
     handleRunClick = () => {
       if (this.state.running) {
-        clearInterval(this.timerRef.current);
+        clearInterval(this.timerRef.current)
       } else {
-        const startTime = Date.now() - this.state.lapse;
+        const startTime = Date.now() - this.state.lapse
         this.timerRef.current = setInterval(() => {
-          const lapse = Date.now() - startTime;
+          const lapse = Date.now() - startTime
 
           // 🦁 Add dispatch to update the tick
-          this.setState((state) => reducer(state, { type: 'tick', payload: lapse }));
-        }, 0);
+          this.setState((state) => reducer(state, { type: 'tick', payload: lapse }))
+        }, 0)
       }
       // 🦁 Add dispatch to toggle running
-      this.setState((state) => reducer(state, { type: 'toggle' }));
+      this.setState((state) => reducer(state, { type: 'toggle' }))
     }
 
     handleClearClick = () => {
-      clearInterval(this.timerRef.current);
+      clearInterval(this.timerRef.current)
       // 🦁 Add dispatch to clear
-      this.setState((state) => reducer(state, { type: 'clear' }));
+      this.setState((state) => reducer(state, { type: 'clear' }))
     }
 
     render() {
@@ -46,6 +46,6 @@ export default class Exercise4 extends React.Component {
             onClearClick={this.handleClearClick}
           />
         </div>
-      );
+      )
     }
 }

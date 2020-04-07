@@ -1,8 +1,8 @@
-import React from 'react';
-import { Route, Switch } from 'react-router';
-import { BrowserRouter, Link } from 'react-router-dom';
+import React from 'react'
+import { Route, Switch } from 'react-router'
+import { BrowserRouter, Link } from 'react-router-dom'
 
-import './App.css';
+import './App.css'
 
 const titles = [
   'Use state basics',
@@ -11,14 +11,14 @@ const titles = [
   'Use reducer basics',
   'Use memo basics',
   'Use callback basics',
-];
+]
 
 function Home() {
   return (
     <div>
       <Link to="/exercise/1">Please start at exercise 1</Link>
     </div>
-  );
+  )
 }
 
 function ExerciseContainer({ children, exerciseId, completed }) {
@@ -37,27 +37,27 @@ function ExerciseContainer({ children, exerciseId, completed }) {
       </h1>
       { children }
     </div>
-  );
+  )
 }
 
 function New({ match }) {
-  const { default: Exercise } = require(`./exercises/${match.params.exerciseId}`);
+  const { default: Exercise } = require(`./exercises/${match.params.exerciseId}`)
 
   return (
     <ExerciseContainer exerciseId={match.params.exerciseId}>
       <Exercise />
     </ExerciseContainer>
-  );
+  )
 }
 
 function Completed({ match }) {
-  const { default: CompletedExercise } = require(`./exercises/${match.params.exerciseId}/completed`);
+  const { default: CompletedExercise } = require(`./exercises/${match.params.exerciseId}/completed`)
 
   return (
     <ExerciseContainer exerciseId={match.params.exerciseId} completed>
       <CompletedExercise />
     </ExerciseContainer>
-  );
+  )
 }
 
 function App() {
@@ -71,7 +71,7 @@ function App() {
         </Switch>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

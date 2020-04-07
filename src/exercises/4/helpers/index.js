@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const buttonStyles = {
   border: '1px solid #ccc',
@@ -7,7 +7,7 @@ const buttonStyles = {
   padding: 15,
   margin: 5,
   width: 200,
-};
+}
 
 function StopWatch({
   lapse, running, onRunClick, onClearClick,
@@ -31,29 +31,29 @@ function StopWatch({
         Clear
       </button>
     </>
-  );
+  )
 }
 
 function reducer(state, { type, payload }) {
   switch (type) {
     case 'clear':
-      return { running: false, lapse: 0 };
+      return { running: false, lapse: 0 }
 
     case 'toggle':
       return {
         ...state,
         running: !state.running,
-      };
+      }
 
     case 'tick':
       return {
         ...state,
         lapse: payload,
-      };
+      }
 
     default:
-      throw new Error();
+      throw new Error()
   }
 }
 
-export { StopWatch, reducer };
+export { StopWatch, reducer }

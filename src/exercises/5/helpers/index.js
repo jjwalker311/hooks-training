@@ -1,26 +1,26 @@
-import React from 'react';
+import React from 'react'
 
 export function getPrimes(max) {
   const sieve = []; let i; let j; const
-    primes = [];
+    primes = []
   for (i = 2; i <= max; ++i) {
     if (!sieve[i]) {
       // i has not been marked -- it is prime
-      primes.push(i);
+      primes.push(i)
       for (j = i << 1; j <= max; j += i) {
-        sieve[j] = true;
+        sieve[j] = true
       }
     }
   }
-  return primes.length;
+  return primes.length
 }
 
 export class DisplayPrimes extends React.PureComponent {
   render() {
-    console.log('<DisplayPrimes /> has been re-rendered!!!');
+    console.log('<DisplayPrimes /> has been re-rendered!!!')
     const {
       max, loading, numberOfPrimes, onButtonClick, onInputChange,
-    } = this.props;
+    } = this.props
     return (
       <div>
         <br />
@@ -43,6 +43,6 @@ export class DisplayPrimes extends React.PureComponent {
           {loading ? 'LOADING' : 'NOT LOADING'}
         </button>
       </div>
-    );
+    )
   }
 }

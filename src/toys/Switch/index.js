@@ -1,7 +1,7 @@
-import './switch.styles.css';
-import React from 'react';
+import './switch.styles.css'
+import React from 'react'
 
-const noop = () => {};
+const noop = () => {}
 
 export default class Switch extends React.Component {
   render() {
@@ -11,14 +11,14 @@ export default class Switch extends React.Component {
       'aria-label': ariaLabel,
       onClick,
       ...props
-    } = this.props;
+    } = this.props
     const btnClassName = [
       className,
       'toggle-btn',
       on ? 'toggle-btn-on' : 'toggle-btn-off',
     ]
       .filter(Boolean)
-      .join(' ');
+      .join(' ')
     return (
       <label
         aria-label={ariaLabel || 'Toggle'}
@@ -36,6 +36,6 @@ export default class Switch extends React.Component {
         />
         <span className={btnClassName} {...props} />
       </label>
-    );
+    )
   }
 }

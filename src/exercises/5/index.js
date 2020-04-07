@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { getPrimes, DisplayPrimes } from './helpers';
+import { getPrimes, DisplayPrimes } from './helpers'
 
 export default class Exercise5 extends React.Component {
     state = {
@@ -9,17 +9,17 @@ export default class Exercise5 extends React.Component {
     }
 
     handleClick = () => {
-      this.setState(({ loading }) => ({ loading: !loading }));
+      this.setState(({ loading }) => ({ loading: !loading }))
     }
 
     handleInputChange = (e) => {
-      this.setState({ max: e.target.value });
+      this.setState({ max: e.target.value })
     }
 
     render() {
       // 🦁 This is calculated every time. Not efficient!
       // https://reactjs.org/docs/hooks-reference.html#usememo
-      const numberOfPrimes = getPrimes(this.state.max);
+      const numberOfPrimes = getPrimes(this.state.max)
 
       return (
         <div>
@@ -31,6 +31,6 @@ export default class Exercise5 extends React.Component {
             onInputChange={this.handleInputChange}
           />
         </div>
-      );
+      )
     }
 }

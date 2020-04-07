@@ -1,41 +1,41 @@
-import React from 'react';
+import React from 'react'
 
-import { StopWatch, reducer } from '../helpers';
+import { StopWatch, reducer } from '../helpers'
 
 /**
  * Custom hook with all stopwatch functionality encapsulated
  */
 function useStopWatch() {
   // Just same as React.createRef()
-  const timerRef = React.useRef(null);
+  const timerRef = React.useRef(null)
 
-  const [{ lapse, running }, dispatch] = React.useReducer(reducer, { lapse: 0, running: false });
+  const [{ lapse, running }, dispatch] = React.useReducer(reducer, { lapse: 0, running: false })
 
   function handleRunClick() {
     if (running) {
-      clearInterval(timerRef.current);
+      clearInterval(timerRef.current)
     } else {
-      const startTime = Date.now() - lapse;
+      const startTime = Date.now() - lapse
       timerRef.current = setInterval(() => {
-        dispatch({ type: 'tick', payload: Date.now() - startTime });
-      }, 0);
+        dispatch({ type: 'tick', payload: Date.now() - startTime })
+      }, 0)
     }
-    dispatch({ type: 'toggle' });
+    dispatch({ type: 'toggle' })
   }
 
   function handleClearClick() {
-    clearInterval(timerRef.current);
-    dispatch({ type: 'clear' });
+    clearInterval(timerRef.current)
+    dispatch({ type: 'clear' })
   }
 
   return [
     lapse, running, handleRunClick, handleClearClick,
-  ];
+  ]
 }
 
 export default function Exercise4() {
-  const [lapseTop, runningTop, handleRunClickTop, handleClearClickTop] = useStopWatch();
-  const [lapseBottom, runningBottom, handleRunClickBottom, handleClearClickBottom] = useStopWatch();
+  const [lapseTop, runningTop, handleRunClickTop, handleClearClickTop] = useStopWatch()
+  const [lapseBottom, runningBottom, handleRunClickBottom, handleClearClickBottom] = useStopWatch()
   return (
     <div>
       <StopWatch
@@ -58,5 +58,5 @@ export default function Exercise4() {
         onClearClick={handleClearClickBottom}
       />
     </div>
-  );
+  )
 }

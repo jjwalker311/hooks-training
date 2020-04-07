@@ -7,7 +7,10 @@
         "fetch": "readonly",
         "document": "readonly",
         "expect": "readonly",
-        "test": "readonly"
+        "test": "readonly",
+        "describe": "readonly",
+        "it": "readonly",
+        "beforeEach": "readonly"
     },
      "rules": {
         "react/prop-types": "off",
@@ -23,6 +26,7 @@
         "react/prefer-stateless-function": "off",
         "react/state-in-constructor": "off",
         "react/destructuring-assignment": "off",
-        "max-len":  ["error", { "code": 120 }]
+        "max-len":  ["error", { "code": 120 }],
+        "semi" : ["error", "never"]
      }
 }

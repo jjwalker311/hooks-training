@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import Switch from '../../toys/Switch';
+import Switch from '../../toys/Switch'
 
 export default class Exercise1 extends React.Component {
     // 🦁 https://reactjs.org/docs/hooks-reference.html#usestate
@@ -8,7 +8,7 @@ export default class Exercise1 extends React.Component {
     state = { on: false }
 
     onToggle = () => {
-      this.setState(({ on }) => ({ on: !on }));
+      this.setState(({ on }) => ({ on: !on }))
     }
 
     render() {
@@ -17,6 +17,6 @@ export default class Exercise1 extends React.Component {
           <Switch on={this.state.on} onClick={this.onToggle} />
           <p>{`The toggle is: ${this.state.on ? 'on' : 'off'}`}</p>
         </div>
-      );
+      )
     }
 }
