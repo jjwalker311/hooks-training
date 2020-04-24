@@ -11,6 +11,7 @@ const titles = [
   'Use reducer basics',
   'Use memo basics',
   'Use callback basics',
+  'Custom local storage hook',
 ]
 
 function Home() {
