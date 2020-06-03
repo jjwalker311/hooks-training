@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-  render, fireEvent, screen,
-} from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import Exercise3 from '.'
 
@@ -9,18 +7,17 @@ describe('Suite of tests on Exercise3', () => {
   beforeEach(() => render(<Exercise3 />))
 
   function scrollTo(position) {
-    fireEvent.scroll(window, { target: { scrollY: position } })
+    // 🦁 Same as "fireEvent.click", but using "scroll" method - https://testing-library.com/docs/dom-testing-library/api-events#fireeventeventname
+    // Hint: first arg is "window", second arg is event "{ target: { scrollY: XXXX } }""
   }
 
-  it('should display scroll position of "0px" by default', () => {
-    expect(screen.getByText(/0px/)).toBeInTheDocument()
+  it.skip('should display scroll position of "0px" by default', () => {
+    // 🦁 Find something by text - https://testing-library.com/docs/dom-testing-library/api-queries#bytext
   })
 
-  it('should update scroll position onScroll', () => {
-    const pixels = 200
+  it.skip('should update scroll position onScroll', () => {
+    // 🦁 Choose a number of pixels to scroll and trigger "scrollTo"
 
-    expect(screen.getByText(/0px/)).toBeInTheDocument()
-    scrollTo(pixels)
-    expect(screen.getByText(new RegExp(`${pixels}px`, 'g'))).toBeInTheDocument()
+    // 🦁 Find something by text - https://testing-library.com/docs/dom-testing-library/api-queries#bytext
   })
 })

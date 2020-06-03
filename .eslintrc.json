@@ -10,7 +10,8 @@
         "test": "readonly",
         "describe": "readonly",
         "it": "readonly",
-        "beforeEach": "readonly"
+        "beforeEach": "readonly",
+        "jest": "readonly"
     },
      "rules": {
         "react/prop-types": "off",
@@ -27,6 +28,7 @@
         "react/state-in-constructor": "off",
         "react/destructuring-assignment": "off",
         "max-len":  ["error", { "code": 120 }],
-        "semi" : ["error", "never"]
+        "semi" : ["error", "never"],
+        "prefer-promise-reject-errors": "off"
      }
 }

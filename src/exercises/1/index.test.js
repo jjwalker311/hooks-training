@@ -1,29 +1,22 @@
 import React from 'react'
-import {
-  render, fireEvent, screen, queryByText,
-} from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import Exercise1 from '.'
 
 describe('Suite of tests on Exercise1', () => {
   beforeEach(() => render(<Exercise1 />))
 
-  // Clicking on toggle
-  function toggle() {
-    fireEvent.click(screen.getByLabelText(/Toggle/i))
-  }
+  it.skip('should be toggled off by default', () => {
+    // 🦁 Find something by text - https://testing-library.com/docs/dom-testing-library/api-queries#bytext
 
-  it('should be toggled off by default', () => {
-    // screen.getByText errors when not found, therefore using queryByText
-    expect(queryByText(document.body, /The toggle is: on/)).toBe(null)
-    expect(screen.getByText('The toggle is: off')).toBeInTheDocument()
+    // Hint: Using "queryByText(...)" when testing for something that isn't there
   })
 
-  it('should toggle on onClick', () => {
-    expect(screen.getByText('The toggle is: off')).toBeInTheDocument()
-    toggle()
-    expect(screen.getByText('The toggle is: on')).toBeInTheDocument()
-    toggle()
-    expect(screen.getByText('The toggle is: off')).toBeInTheDocument()
+  it.skip('should toggle on onClick', () => {
+    // 🦁 Find something by text - https://testing-library.com/docs/dom-testing-library/api-queries#bytext
+
+    // Hint: To find element by associated label - https://testing-library.com/docs/dom-testing-library/api-queries#bylabeltext
+
+    // Hint:  Firing a click event - https://testing-library.com/docs/ecosystem-user-event
   })
 })

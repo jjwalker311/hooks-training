@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+form input {
+  height: 20px;
+  text-align: center;
+  margin: 0 1em;
+}
+
+form button { 
+  height: 26px;
+  background: darkgreen;
+  color: white;
+  border: none;
+}
+
+form span.status, form span.error {
+  display: block;
+  margin: 1em;
+  font-weight: bold;
+}
+
+form span.status {
+  color: blue;
+}
+
+form span.error {
+  color: red;
+}

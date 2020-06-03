@@ -2,6 +2,8 @@ import React from 'react'
 import { Route, Switch } from 'react-router'
 import { BrowserRouter, Link } from 'react-router-dom'
 
+import { StateProvider } from './toys/StateProvider'
+
 import './App.css'
 
 const titles = [
@@ -12,6 +14,8 @@ const titles = [
   'Use memo basics',
   'Use callback basics',
   'Custom local storage hook',
+  'Use context basics',
+  'Testing <form />',
 ]
 
 function Home() {
@@ -41,12 +45,27 @@ function ExerciseContainer({ children, exerciseId, completed }) {
   )
 }
 
+/**
+ * Async helper function used by exercise 9
+ */
+async function updateUsername(username) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (username) {
+        resolve()
+      } else {
+        reject({ message: 'No user name' })
+      }
+    }, 500)
+  })
+}
+
 function New({ match }) {
   const { default: Exercise } = require(`./exercises/${match.params.exerciseId}`)
 
   return (
     <ExerciseContainer exerciseId={match.params.exerciseId}>
-      <Exercise />
+      <Exercise updateUsername={updateUsername} />
     </ExerciseContainer>
   )
 }
@@ -64,13 +83,15 @@ function Completed({ match }) {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/exercise/:exerciseId" exact component={New} />
-          <Route path="/exercise/:exerciseId/completed" exact component={Completed} />
-        </Switch>
-      </BrowserRouter>
+      <StateProvider>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/exercise/:exerciseId" exact component={New} />
+            <Route path="/exercise/:exerciseId/completed" exact component={Completed} />
+          </Switch>
+        </BrowserRouter>
+      </StateProvider>
     </div>
   )
 }

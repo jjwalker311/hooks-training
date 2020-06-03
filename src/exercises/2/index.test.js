@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-  render, fireEvent, screen,
-} from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import Exercise2 from '.'
 
@@ -9,15 +7,9 @@ describe('Suite of tests on Exercise2', () => {
   beforeEach(() => render(<Exercise2 />))
 
   // Clicking on toggle
-  function toggle() {
-    fireEvent.click(screen.getByLabelText(/Toggle/i))
-  }
+  it.skip('should update document title on toggle', () => {
+    // 🦁 Firing a click event - https://testing-library.com/docs/ecosystem-user-event
 
-  it('should update document title on toggle', () => {
-    expect(document.title).toMatch(/off!!!/)
-    toggle()
-    expect(document.title).toMatch(/on!!!/)
-    toggle()
-    expect(document.title).toMatch(/off!!!/)
+    // 🦁 Hint: Can just assert value of "document.title"
   })
 })
