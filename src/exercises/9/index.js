@@ -26,7 +26,7 @@ export default function Exercise9({ updateUsername }) {
         Username
         <input id="username" />
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit" name="submit">Submit</button>
       <span className="status">{status === 'pending' ? 'Saving...' : null}</span>
       <span className="error">{status === 'rejected' ? error.message : null}</span>
     </form>

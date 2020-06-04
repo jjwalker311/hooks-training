@@ -1,13 +1,13 @@
-import React from 'react'
-import user from '@testing-library/user-event'
-import {
-  render, screen,
-} from '@testing-library/react'
+// import React from 'react'
+// import user from '@testing-library/user-event'
+// import {
+//   render, screen,
+// } from '@testing-library/react'
 
-import Exercise9 from '.'
+// import Exercise9 from '.'
 
-const USERNAME = 'some-user-name'
-const ERROR_MESSAGE = 'some-error-message'
+// const USERNAME = 'some-user-name'
+// const ERROR_MESSAGE = 'some-error-message'
 
 describe.skip('Suite of tests on Exercise 9', () => {
   it.skip('calls updateUsername with the new username', async () => {
@@ -16,6 +16,8 @@ describe.skip('Suite of tests on Exercise 9', () => {
     // 🦁 Find the <input/> using "getByLabelText" - https://testing-library.com/docs/dom-testing-library/api-queries#bylabeltext
 
     // 🦁 Type "USERNAME" in that input using - https://testing-library.com/docs/ecosystem-user-event
+
+    // 🦁 Find the <button/> using "getByRole" - https://testing-library.com/docs/guide-which-query
 
     // 🦁 Submit forming using "user.click(...)"
   })

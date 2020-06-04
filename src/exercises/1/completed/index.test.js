@@ -17,8 +17,6 @@ describe('Suite of tests on Exercise1', () => {
   }
 
   it('should be toggled off by default', () => {
-    // screen.getByText errors when not found, therefore using queryByText
-    expect(queryByText(document.body, /The toggle is: on/)).toBe(null)
     expect(screen.getByText('The toggle is: off')).toBeInTheDocument()
   })
 

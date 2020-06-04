@@ -1,5 +1,9 @@
 {
     "parser": "babel-eslint",
+    "plugins": [
+        "eslint-plugin-testing-library",
+        "eslint-plugin-jest-dom"
+    ],
     "extends": "airbnb",
     "globals": {
         "window": "readonly",

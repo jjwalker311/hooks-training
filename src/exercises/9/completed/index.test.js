@@ -1,7 +1,7 @@
 import React from 'react'
 import user from '@testing-library/user-event'
 import {
-  render, screen, waitForElementToBeRemoved, waitFor,
+  render, screen, waitForElementToBeRemoved, waitFor, act,
 } from '@testing-library/react'
 
 import Exercise9 from '..'
@@ -17,7 +17,7 @@ describe('Suite of tests on Exercise 9', () => {
 
     const usernameInput = screen.getByLabelText(/username/i)
     await user.type(usernameInput, USERNAME)
-    user.click(screen.getByText(/submit/i))
+    user.click(screen.getByRole('button', { name: /submit/i }))
 
     expect(handleUpdateUsername).toHaveBeenCalledWith(USERNAME)
     await waitForElementToBeRemoved(() => screen.getByText(/saving/i))
@@ -28,7 +28,7 @@ describe('Suite of tests on Exercise 9', () => {
 
     render(<Exercise9 updateUsername={handleUpdateUsername} />)
 
-    user.click(screen.getByText(/submit/i))
+    user.click(screen.getByRole('button', { name: /submit/i }))
 
     await waitForElementToBeRemoved(() => screen.getByText(/saving/i))
     await waitFor(() => screen.getByText(ERROR_MESSAGE))
