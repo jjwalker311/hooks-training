@@ -19,5 +19,7 @@ describe('Suite of tests on Exercise3', () => {
     // 🦁 Choose a number of pixels to scroll and trigger "scrollTo"
 
     // 🦁 Find something by text - https://testing-library.com/docs/dom-testing-library/api-queries#bytext
+
+    // Hint: create dynamic Regex - "new RegExp(`${pixels}px`)""
   })
 })

@@ -14,14 +14,14 @@ describe('Suite of tests on Exercise3', () => {
   }
 
   it('should display scroll position of "0px" by default', () => {
-    expect(screen.getByText(/0px/)).toBeInTheDocument()
+    expect(screen.getByText(/0px/i)).toBeInTheDocument()
   })
 
   it('should update scroll position onScroll', () => {
     const pixels = 200
 
-    expect(screen.getByText(/0px/)).toBeInTheDocument()
+    expect(screen.getByText(/0px/i)).toBeInTheDocument()
     scrollTo(pixels)
-    expect(screen.getByText(new RegExp(`${pixels}px`, 'g'))).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`${pixels}px`))).toBeInTheDocument()
   })
 })

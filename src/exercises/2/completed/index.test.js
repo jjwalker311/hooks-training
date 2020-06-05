@@ -17,10 +17,10 @@ describe('Suite of tests on Exercise2', () => {
   }
 
   it('should update document title on toggle', () => {
-    expect(document.title).toMatch(/off!!!/)
+    expect(document.title).toMatch(/off!!!/i)
     toggle()
-    expect(document.title).toMatch(/on!!!/)
+    expect(document.title).toMatch(/on!!!/i)
     toggle()
-    expect(document.title).toMatch(/off!!!/)
+    expect(document.title).toMatch(/off!!!/i)
   })
 })

@@ -24,10 +24,10 @@ describe('Suite of tests on Exercise1', () => {
   })
 
   it('should toggle on onClick', () => {
-    expect(screen.getByText('The toggle is: off')).toBeInTheDocument()
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
     toggle()
-    expect(screen.getByText('The toggle is: on')).toBeInTheDocument()
+    expect(screen.getByText(/on/i)).toBeInTheDocument()
     toggle()
-    expect(screen.getByText('The toggle is: off')).toBeInTheDocument()
+    expect(screen.getByText(/off/i)).toBeInTheDocument()
   })
 })
