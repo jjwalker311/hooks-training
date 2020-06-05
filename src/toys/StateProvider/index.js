@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React from 'react'
 
 const DOGS = [
   'Labrador',
@@ -15,11 +15,11 @@ const DOGS = [
 ]
 
 const initialState = { dogs: DOGS, favourite: null }
-const store = createContext(initialState)
+const store = React.createContext(initialState)
 const { Provider } = store
 
 const StateProvider = ({ children }) => {
-  const [state, dispatch] = useReducer((currentState, action) => {
+  const [state, dispatch] = React.useReducer((currentState, action) => {
     switch (action.type) {
       case 'ADD':
         if (!action.payload) throw new Error('Please enter a dog to add!')
