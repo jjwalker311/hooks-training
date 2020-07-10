@@ -2,9 +2,7 @@ import React from 'react'
 
 import user from '@testing-library/user-event'
 
-import {
-  render, screen, queryByText,
-} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import Exercise1 from '.'
 

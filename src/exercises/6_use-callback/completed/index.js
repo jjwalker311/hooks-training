@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getPrimes, DisplayPrimes } from '../../5/helpers'
+import { getPrimes, DisplayPrimes } from '../../5_use-memo/helpers'
 
 export default function Exercise5() {
   const [max, setMax] = React.useState(10)

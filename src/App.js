@@ -6,16 +6,28 @@ import { StateProvider } from './toys/StateProvider'
 
 import './App.css'
 
-const titles = [
+const TITLES = [
   'Use state basics',
   'Use effect basics',
   'Use effect replacing lifecycle methods',
   'Use reducer basics',
   'Use memo basics',
   'Use callback basics',
-  'Custom local storage hook',
   'Use context basics',
+  'Custom local storage hook',
   'Testing <form />',
+]
+
+const FILES = [
+  '1_use-state',
+  '2_use-effect-basic',
+  '3_use-effect-tidy-up',
+  '4_use-reducer',
+  '5_use-memo',
+  '6_use-callback',
+  '7_use-context',
+  '8_local-storage-exercise',
+  '9_html-form-exercise',
 ]
 
 function Home() {
@@ -38,7 +50,7 @@ function ExerciseContainer({ children, exerciseId, completed }) {
     }}
     >
       <h1 style={{ gridColumn: 'span 2', textAlign: 'center' }}>
-        {`Exercise ${exerciseId}: ${titles[exerciseId - 1]} ${completed ? 'solution' : 'exercise'}`}
+        {`Exercise ${exerciseId}: ${TITLES[exerciseId - 1]} ${completed ? 'solution' : 'exercise'}`}
       </h1>
       { children }
     </div>
@@ -61,7 +73,7 @@ async function updateUsername(username) {
 }
 
 function New({ match }) {
-  const { default: Exercise } = require(`./exercises/${match.params.exerciseId}`)
+  const { default: Exercise } = require(`./exercises/${FILES[match.params.exerciseId - 1]}`)
 
   return (
     <ExerciseContainer exerciseId={match.params.exerciseId}>
@@ -71,7 +83,7 @@ function New({ match }) {
 }
 
 function Completed({ match }) {
-  const { default: CompletedExercise } = require(`./exercises/${match.params.exerciseId}/completed`)
+  const { default: CompletedExercise } = require(`./exercises/${FILES[match.params.exerciseId - 1]}/completed`)
 
   return (
     <ExerciseContainer exerciseId={match.params.exerciseId} completed>
