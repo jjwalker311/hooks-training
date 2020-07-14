@@ -20,8 +20,8 @@ const TITLES = [
 
 const FILES = [
   '1_use-state',
-  '2_use-effect-basic',
-  '3_use-effect-tidy-up',
+  '2_use-effect',
+  '3_use-layout-effect',
   '4_use-reducer',
   '5_use-memo',
   '6_use-callback',

@@ -5,7 +5,7 @@ export default class Exercise3 extends React.Component {
     // Same as before, initialise with "useState"
     state = { position: 0 }
 
-    // 🦁 https://reactjs.org/docs/hooks-reference.html#useeffect
+    // 🦁 https://reactjs.org/docs/hooks-reference.html#uselayouteffect
     // Replace life cycle methods, with single "useEffect"
     // Remember to set dependencies and to tidy up after yourselves!
     componentDidMount() {
