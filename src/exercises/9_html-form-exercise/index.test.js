@@ -1,15 +1,23 @@
-// import React from 'react'
+import React from 'react'
 // import user from '@testing-library/user-event'
 // import {
 //   render, screen,
 // } from '@testing-library/react'
 
-// import Exercise9 from '.'
+import Exercise9 from '.'
 
 // const USERNAME = 'some-user-name'
 // const ERROR_MESSAGE = 'some-error-message'
 
-describe.skip('Suite of tests on Exercise 9', () => {
+const mockUpdateUserName = jest.fn(() => Promise.resolve())
+
+const wrapper = shallow(<Exercise9 updateUsername={mockUpdateUserName} />)
+
+describe('Suite of tests on Exercise 9', () => {
+  it('should render a form', () => {
+    expect(wrapper.find('form').length).toBe(1)
+  })
+
   it.skip('calls updateUsername with the new username', async () => {
     // 🦁 Render <Exercise9/> and pass in "updateUsername" as a jest function that returns a Promise.resolve()
 

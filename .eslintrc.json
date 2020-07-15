@@ -15,7 +15,8 @@
         "describe": "readonly",
         "it": "readonly",
         "beforeEach": "readonly",
-        "jest": "readonly"
+        "jest": "readonly",
+        "shallow": "readonly"
     },
      "rules": {
         "react/prop-types": "off",
