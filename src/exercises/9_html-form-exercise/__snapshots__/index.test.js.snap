@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Suite of tests on Exercise 9 should render basic form items 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <br />
+  <br />
+  <label
+    htmlFor="username"
+  >
+    Username
+    <input
+      id="username"
+    />
+  </label>
+  <button
+    name="submit"
+    type="submit"
+  >
+    Submit
+  </button>
+  <span
+    className="status"
+  />
+  <span
+    className="error"
+  />
+</form>
+`;

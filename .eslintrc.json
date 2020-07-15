@@ -16,7 +16,9 @@
         "it": "readonly",
         "beforeEach": "readonly",
         "jest": "readonly",
-        "shallow": "readonly"
+        "shallow": "readonly",
+        "snapshot": "readonly",
+        "mount": "readonly",
     },
      "rules": {
         "react/prop-types": "off",

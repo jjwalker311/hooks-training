@@ -5,6 +5,7 @@ import React from 'react'
 // } from '@testing-library/react'
 
 import Exercise9 from '.'
+import { shallow } from 'enzyme'
 
 // const USERNAME = 'some-user-name'
 // const ERROR_MESSAGE = 'some-error-message'
@@ -13,26 +14,20 @@ const mockUpdateUserName = jest.fn(() => Promise.resolve())
 
 const wrapper = shallow(<Exercise9 updateUsername={mockUpdateUserName} />)
 
+// const handleSubmit = wrapper.find('form').prop('onSubmit')
+
+// function isInError() {
+//   return !!wrapper.find('span.error').text()
+// }
+
 describe('Suite of tests on Exercise 9', () => {
-  it('should render a form', () => {
-    expect(wrapper.find('form').length).toBe(1)
+  it('should render basic form items', () => {
+    expect(snapshot(wrapper)).toMatchSnapshot()
   })
 
-  it.skip('calls updateUsername with the new username', async () => {
-    // 🦁 Render <Exercise9/> and pass in "updateUsername" as a jest function that returns a Promise.resolve()
-
-    // 🦁 Find the <input/> using "getByLabelText" - https://testing-library.com/docs/dom-testing-library/api-queries#bylabeltext
-
-    // 🦁 Type "USERNAME" in that input using - https://testing-library.com/docs/ecosystem-user-event
-
-    // 🦁 Find the <button/> using "getByRole" - https://testing-library.com/docs/guide-which-query
-
-    // 🦁 Submit forming using "user.click(...)"
+  it('calls updateUsername with the new username on form submit', async () => {
   })
 
-  it.skip('displays error message when no username is entered', async () => {
-    // 🦁 Render <Exercise9/> and pass in "updateUsername" as a jest function that returns a Promise.reject({message : XXXXX})
-
-    // 🦁 Submit forming using "user.click(...)"
+  it('displays error message when no username is entered', async () => {
   })
 })
