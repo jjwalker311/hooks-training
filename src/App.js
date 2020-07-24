@@ -16,18 +16,20 @@ const TITLES = [
   'Use context basics',
   'Custom local storage hook',
   'Testing <form />',
+  'Custom media query hook',
 ]
 
 const FILES = [
   '1_use-state',
   '2_use-effect',
-  '3_use-layout-effect',
+  '3_use-effect-tidy-up',
   '4_use-reducer',
   '5_use-memo',
   '6_use-callback',
   '7_use-context',
   '8_local-storage-exercise',
   '9_html-form-exercise',
+  '10_custom-media-query',
 ]
 
 function Home() {

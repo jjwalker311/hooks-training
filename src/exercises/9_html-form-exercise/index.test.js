@@ -20,14 +20,14 @@ const wrapper = shallow(<Exercise9 updateUsername={mockUpdateUserName} />)
 //   return !!wrapper.find('span.error').text()
 // }
 
-describe('Suite of tests on Exercise 9', () => {
-  it('should render basic form items', () => {
-    expect(snapshot(wrapper)).toMatchSnapshot()
-  })
+// describe('Suite of tests on Exercise 9', () => {
+//   it('should render basic form items', () => {
+//     expect(snapshot(wrapper)).toMatchSnapshot()
+//   })
 
-  it('calls updateUsername with the new username on form submit', async () => {
-  })
+//   it('calls updateUsername with the new username on form submit', async () => {
+//   })
 
-  it('displays error message when no username is entered', async () => {
-  })
-})
+//   it('displays error message when no username is entered', async () => {
+//   })
+// })
