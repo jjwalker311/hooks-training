@@ -3,7 +3,7 @@ import React from 'react'
 function usePageYOffset() {
   const [position, setPosition] = React.useState(0)
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     // Scroll handler
     function handleScroll(event) {
       const newPosition = window.pageYOffset || event.target.scrollY || 0

@@ -6,7 +6,7 @@ import {
 
 import Exercise3 from '.'
 
-describe('Suite of tests on Exercise3', () => {
+describe.skip('Suite of tests on Exercise3', () => {
   beforeEach(() => render(<Exercise3 />))
 
   function scrollTo(position) {

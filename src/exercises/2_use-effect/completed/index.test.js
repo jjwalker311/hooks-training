@@ -8,7 +8,7 @@ import {
 
 import Exercise2 from '.'
 
-describe('Suite of tests on Exercise2', () => {
+describe.skip('Suite of tests on Exercise2', () => {
   beforeEach(() => render(<Exercise2 />))
 
   // Clicking on toggle

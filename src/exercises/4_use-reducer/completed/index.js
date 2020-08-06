@@ -5,7 +5,7 @@ import { StopWatch, reducer } from '../helpers'
 /**
  * Custom hook with all stopwatch functionality encapsulated
  */
-function useStopWatch() {
+export function useStopWatch() {
   // Just same as React.createRef()
   const timerRef = React.useRef(null)
 

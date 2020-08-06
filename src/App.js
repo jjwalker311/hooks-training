@@ -4,6 +4,8 @@ import { BrowserRouter, Link } from 'react-router-dom'
 
 import { StateProvider } from './toys/StateProvider'
 
+import { CatsStoreProvider } from './exercises/14_mobx-local-examples/mobx/catsStore'
+
 import './App.css'
 
 const TITLES = [
@@ -16,18 +18,28 @@ const TITLES = [
   'Use context basics',
   'Custom local storage hook',
   'Testing <form />',
+  'Custom will unmount hook',
+  'Custom media query hook',
+  'Custom formatted input hook',
+  'Global Mobx with Hooks',
+  'Local Mobx with Hooks',
 ]
 
 const FILES = [
   '1_use-state',
   '2_use-effect',
-  '3_use-layout-effect',
+  '3_use-effect-tidy-up',
   '4_use-reducer',
   '5_use-memo',
   '6_use-callback',
   '7_use-context',
   '8_local-storage-exercise',
   '9_html-form-exercise',
+  '10_will-unmount',
+  '11_custom-media-query',
+  '12_custom-formatted-input',
+  '13_mobx-global-examples',
+  '14_mobx-local-examples',
 ]
 
 function Home() {
@@ -96,13 +108,15 @@ function App() {
   return (
     <div className="App">
       <StateProvider>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/exercise/:exerciseId" exact component={New} />
-            <Route path="/exercise/:exerciseId/completed" exact component={Completed} />
-          </Switch>
-        </BrowserRouter>
+        <CatsStoreProvider>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/exercise/:exerciseId" exact component={New} />
+              <Route path="/exercise/:exerciseId/completed" exact component={Completed} />
+            </Switch>
+          </BrowserRouter>
+        </CatsStoreProvider>
       </StateProvider>
     </div>
   )

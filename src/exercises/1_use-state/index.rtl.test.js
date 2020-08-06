@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 
 import Exercise1 from '.'
 
-describe('Suite of tests on Exercise1', () => {
+describe.skip('Suite of tests on Exercise1', () => {
   beforeEach(() => render(<Exercise1 />))
 
   it.skip('should be toggled off by default', () => {

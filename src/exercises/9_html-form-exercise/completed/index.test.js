@@ -1,6 +1,8 @@
 import React from 'react'
 import user from '@testing-library/user-event'
-import { render, screen, waitForElementToBeRemoved, waitFor } from '@testing-library/react'
+import {
+  render, screen, waitForElementToBeRemoved, waitFor,
+} from '@testing-library/react'
 
 import Exercise9 from '..'
 

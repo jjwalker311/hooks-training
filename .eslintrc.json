@@ -15,7 +15,10 @@
         "describe": "readonly",
         "it": "readonly",
         "beforeEach": "readonly",
-        "jest": "readonly"
+        "jest": "readonly",
+        "shallow": "readonly",
+        "snapshot": "readonly",
+        "mount": "readonly"
     },
      "rules": {
         "react/prop-types": "off",
@@ -33,6 +36,9 @@
         "react/destructuring-assignment": "off",
         "max-len":  ["error", { "code": 120 }],
         "semi" : ["error", "never"],
-        "prefer-promise-reject-errors": "off"
+        "prefer-promise-reject-errors": "off",
+        "max-len": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-unused-vars": "warn"
      }
 }
