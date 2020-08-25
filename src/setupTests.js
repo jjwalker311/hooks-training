@@ -12,6 +12,8 @@ import toJson from 'enzyme-to-json'
 
 import registerRequireContextHook from 'babel-plugin-require-context-hook/register'
 
+import { act } from 'react-dom/test-utils'
+
 registerRequireContextHook()
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -19,5 +21,6 @@ Enzyme.configure({ adapter: new Adapter() })
 global.mount = Enzyme.mount
 global.shallow = Enzyme.shallow
 global.render = Enzyme.render
+global.act = act
 global.snapshot = toJson
 global.window.matchMedia = () => ({ matches: () => {} }) // required for lib-web-analytics

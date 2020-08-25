@@ -4,7 +4,10 @@
         "eslint-plugin-testing-library",
         "eslint-plugin-jest-dom"
     ],
-    "extends": "airbnb",
+    "extends": [
+        "airbnb",
+        "plugin:react-hooks/recommended"
+    ],
     "globals": {
         "window": "readonly",
         "navigator": "readonly",
@@ -17,6 +20,7 @@
         "beforeEach": "readonly",
         "jest": "readonly",
         "shallow": "readonly",
+        "act": "readonly",
         "snapshot": "readonly",
         "mount": "readonly"
     },
@@ -39,6 +43,8 @@
         "prefer-promise-reject-errors": "off",
         "max-len": "off",
         "import/no-extraneous-dependencies": "off",
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "react/no-array-index-key": "off",
+        "no-undef": "warn"
      }
 }

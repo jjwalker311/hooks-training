@@ -23,6 +23,8 @@ const TITLES = [
   'Custom formatted input hook',
   'Global Mobx with Hooks',
   'Local Mobx with Hooks',
+  '',
+  'Putting it all together!!!',
 ]
 
 const FILES = [
@@ -40,6 +42,8 @@ const FILES = [
   '12_custom-formatted-input',
   '13_mobx-global-examples',
   '14_mobx-local-examples',
+  '',
+  '16_putting-it-all-together',
 ]
 
 function Home() {
